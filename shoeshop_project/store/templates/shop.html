@@ -1,0 +1,34 @@
+{% extends "main.html"%}
+
+{% block title %}Shop Page{% endblock %}
+
+{% block content %}
+<div class="category-menu">
+  <a href="{% url 'shop' %}?category=all" {% if selected_category == "all" %}class="active"{% endif %}>All</a>
+  <a href="{% url 'shop' %}?category=shoes" {% if selected_category == "shoes" %}class="active"{% endif %}>Shoes</a>
+  <a href="{% url 'shop' %}?category=slippers" {% if selected_category == "slippers" %}class="active"{% endif %}>Slippers</a>
+  <a href="{% url 'shop' %}?category=boots" {% if selected_category == "boots" %}class="active"{% endif %}>Boots</a>
+</div>
+
+<div class="main-holder">
+  <div class="item-holder">
+    {% for shoe in shoes %}
+      <div class="item">
+        <div class="image-holder">
+          {% if shoe.image %}
+            <img src="{{ shoe.image.url }}">
+          {% else %}
+            <p>No image</p>
+          {% endif %}
+        </div>
+        <div class="items-description-holder" id='items-description-holder'>
+          <h3>{{ shoe.name }}</h3>
+          <p>₱{{ shoe.price }}</p>
+          <p>{{ shoe.category }}</p>
+          <p>{{ shoe.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

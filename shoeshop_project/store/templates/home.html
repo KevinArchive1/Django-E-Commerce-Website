@@ -1,0 +1,40 @@
+    {% extends "main.html" %}
+
+    {% load static %}
+
+    {% block title %}Home Page{% endblock %}
+
+    {% block content %}
+
+    <div class="Home-page">
+        <div class="intro">
+            <div class="img-holder">
+                <img src="{% static 'Icon.png' %}" alt="Logo">
+            </div>
+            <div class="description-holder">
+                <h1>
+                    Welcome to Sakura Footwear
+                </h1>
+                
+                <p>
+                    At <strong>Sakura Footwear</strong>, we believe that every step should be stylish, comfortable, and full of confidence. 
+                    Inspired by Japanese elegance and modern trends, our footwear collection blends tradition with contemporary design.
+                </p>
+                
+                <p>
+                    From everyday casual shoes to statement boots and sleek sandals, our products are crafted with care to fit your lifestyle. 
+                    Whether you’re dressing for comfort, performance, or fashion, Sakura Footwear has the perfect pair for you.
+                </p>
+                
+                <p>
+                    Step into Sakura today — shop our collection and find the perfect pair made just for you!
+                </p>
+            </div>
+            <div class="shoe-img">
+                <img src="{% static 'shoe.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    {% endblock %}

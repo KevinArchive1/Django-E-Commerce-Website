@@ -1,0 +1,18 @@
+{% load static %}
+
+<nav>
+    <div class="company-name">
+        <div class="logo">
+            <img src="{% static 'logo.png' %}" alt="image">
+        </div>
+        <div>
+            <h1>Sakura Footwear</h1>
+            <p>Every Step Blossoms</p>
+        </div>
+    </div>
+    <ul>
+        <li class="nav-button"><a href="{% url 'home' %}"  class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
+        <li class="nav-button"><a href="{% url 'shop' %}"  class="{% if request.resolver_match.url_name == 'shop' %}active{% endif %}">Shop</a></li>
+        <li class="nav-button"><a href="{% url 'about' %}"  class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
+    </ul>
+</nav>

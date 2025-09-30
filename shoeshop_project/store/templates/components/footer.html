@@ -1,0 +1,61 @@
+{% load static %}
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Section -->
+    <div class="footer-brand">
+      <div class="brand">
+        <img src="{% static 'logo.png' %}" alt="Sakura Logo" class="footer-logo">
+        <div id="logo-text">
+            <h2>Sakura Footwear</h2>
+            <div id="catch-phrase-main">
+                <p>Every Step <span>Blossoms</span> with Style</p>
+            </div>
+          </div>
+      </div>
+      <p id="catch-phrase">Step into style, step into comfort, step into Sakura. Explore our collections today and find footwear that’s made for you.</p>
+    </div>
+
+    <!-- Navigation Sections -->
+    <div class="footer-links">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="{% url 'shop' %}">All Products</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Kids</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Shipping</a></li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div class="footer-socials">
+      <h3>Follow Us</h3>
+      <a href="#">Facebook</a> 
+      <a href="#">Instagram</a> 
+      <a href="#">Twitter</a>
+    </div>
+  </div>
+  <hr>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Sakura Footwear | All Rights Reserved</p>
+  </div>
+</footer>
